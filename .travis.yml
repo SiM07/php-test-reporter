@@ -29,11 +29,6 @@ matrix:
   allow_failures:
     - php: nightly
 
-cache:
-  directories:
-    - $HOME/.composer/cache
-    - $HOME/.php-cs-fixer
-
 before_install:
   - source .travis/travis.sh
   - if [[ $TRAVIS_PHP_VERSION != hhvm && $TRAVIS_PHP_VERSION != nightly && $COVERAGE != yes ]]; then phpenv config-rm xdebug.ini; fi
